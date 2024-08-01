@@ -1,8 +1,8 @@
 terraform {
   required_providers {
     aws = {
-      source  = "hashicorp/aws"
-      version = "~> 5.0"
+      source                = "hashicorp/aws"
+      version               = "~> 5.0"
       configuration_aliases = [aws.default]
     }
     random = {
@@ -16,6 +16,6 @@ terraform {
   }
 }
 # keep this commented out when deploying - needs to be here when running terraform validate locally
-provider "aws" {
-  alias = "default"
-}
+# provider "aws" {
+#   alias = "default"
+# }
