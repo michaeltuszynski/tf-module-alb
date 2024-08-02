@@ -29,6 +29,6 @@ output "alb_security_group_id" {
 }
 
 output "target_group_arn" {
-  value       = aws_lb_target_group.ecs.arn
+  value       = aws_lb_target_group.default.arn
   description = "The ARN of the target group"
 }
