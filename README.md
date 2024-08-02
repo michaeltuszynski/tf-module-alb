@@ -2,7 +2,7 @@
 
 ```hcl
 module "my_alb" {
-  source         = "git::https://github.com/harmonate/tf-module-alb.git?ref=main"
+  source         = "git::https://github.com/michaeltuszynski/tf-module-alb.git?ref=main"
   hosted_zone_id = "Z1234567890ABC"
   subdomain      = "api"
   vpc_id         = "vpc-1234567890abcdef0"
