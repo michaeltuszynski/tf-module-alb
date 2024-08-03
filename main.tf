@@ -2,8 +2,12 @@ data "aws_route53_zone" "selected" {
   zone_id = var.hosted_zone_id
 }
 
+locals {
+  alb_hostname = "${var.subdomain}.${data.aws_route53_zone.selected.name}"
+}
+
 resource "aws_acm_certificate" "cert" {
-  domain_name       = "${var.subdomain}.${data.aws_route53_zone.selected.name}"
+  domain_name       = local.alb_hostname
   validation_method = "DNS"
 
   lifecycle {

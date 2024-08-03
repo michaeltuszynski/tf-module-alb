@@ -9,7 +9,8 @@ output "alb_dns_name" {
 }
 
 output "custom_alb_dns_name" {
-  value       = aws_route53_record.subdomain.name
+  #value       = aws_route53_record.subdomain.name
+  value       = local.alb_hostname
   description = "The DNS name of the custom ALB record"
 }
 
