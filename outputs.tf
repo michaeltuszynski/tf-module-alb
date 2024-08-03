@@ -8,6 +8,11 @@ output "alb_dns_name" {
   description = "The DNS name of the created ALB"
 }
 
+output "custom_alb_dns_name" {
+  value       = aws_route53_record.subdomain.name
+  description = "The DNS name of the custom ALB record"
+}
+
 output "alb_zone_id" {
   value       = aws_lb.alb.zone_id
   description = "The canonical hosted zone ID of the ALB"
